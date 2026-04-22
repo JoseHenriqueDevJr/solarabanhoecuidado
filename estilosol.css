@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FDF6EC; 
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 120px;
+    background-color: #8B6B4A;
+}
+#sobresolara{
+    display: flex;
+    align-items: center;
+}
+.apresentacao {
+
+    width: 700px;
+    max-width: 90%; /* Garante que seja responsivo em telas menores */
+    margin: 0 auto; /* Centraliza a div horizontalmente */
+    padding: 20px;  /* Adiciona um espaçamento interno para o texto não encostar nas bordas */
+    border-radius: 8px; /* Opcional: suaviza as bordas */
+    color: #8B6B4A; /* Ajuste para o texto ficar legível sobre o fundo escuro */
+    text-align: left;
+}
+h1 img{
+    width: 200px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/* SECTION */
+section {
+    text-align: center;
+    padding: 40px 20px;
+
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #8B6B4A;
+    margin-bottom: 20px;
+}
+
+/* BOTÃO */
+.botao-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.maisprodutos {
+    background: #8B6B4A;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.maisprodutos:hover {
+    background: #6e4f25;
+    transform: scale(1.05);
+}
+
+/* CARROSSEL */
+.carousel-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel {
+    position: relative;
+    width: 600px;
+    height: 400px;
+}
+
+/* imagens */
+.item {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+/* centro */
+.active {
+    width: 320px;
+    height: 320px;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+/* anterior */
+.prev {
+    left: 50%;
+    transform: translateX(-250px);
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+/* próximo */
+.next {
+    left: 50%;
+    transform: translateX(100px);
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+/* botões */
+.carousel-custom button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+}
+/* ESTILIZAÇÃO DA SEÇÃO DE ORÇAMENTO */
+.orcamento {
+    background-color: #f9f1e7; /* Um tom levemente diferente para destacar a seção */
+    padding: 60px 20px;
+}
+
+.orcamento p {
+    color: #8B6B4A;
+    margin-bottom: 30px;
+}
+
+.contatos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Garante que quebre linha no celular */
+}
+
+.card-contato {
+    background: #ffffff;
+    border: 1px solid #e0d5c5;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card-contato:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(139, 107, 74, 0.2);
+    border-color: #8B6B4A;
+}
+
+.card-contato .info {
+    margin-bottom: 15px;
+}
+
+.card-contato strong {
+    display: block;
+    font-size: 1.4rem;
+    color: #8B6B4A;
+    font-family: 'Playfair Display', serif;
+}
+
+.card-contato span {
+    font-size: 0.9rem;
+    color: #a38b71;
+}
+
+.btn-whatsapp {
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-contato:hover .btn-whatsapp {
+    background-color: #128C7E;
+}
+/* FOOTER */
+footer {
+    background-color: #8B6B4A; /* Mesmo tom do header */
+    color: #ffffff;
+    padding: 60px 20px 20px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.footer-section h4 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.footer-section.brand img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #FDF6EC;
+    text-decoration: none;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.footer-section a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    display: flex; /* Alinha os dois textos lateralmente em telas grandes */
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.desenvolvido strong {
+    color: #FDF6EC; /* Cor de destaque suave */
+    letter-spacing: 0.5px;
+}
+
+.icon img {
+    width: 30px;
+    height: 30px;
+}
+footer a {
+    text-decoration: none; /* tira a linha */
+    color: inherit;        /* usa a cor do texto normal */
+}
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Responsividade para o rodapé */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;
+        height: 300px;
+    }
+
+    .active {
+        width: 220px;
+        height: 220px;
+    }
+
+    .item {
+        width: 120px;
+        height: 120px;
+    }
+
+    .prev {
+        transform: translateX(-150px);
+    }
+
+    .next {
+        transform: translateX(50px);
+    }
+}
